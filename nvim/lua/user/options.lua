@@ -11,4 +11,4 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.tabstop = 2
 vim.opt.scrolloff = 10
-
+vim.opt.clipboard = 'unnamed'
