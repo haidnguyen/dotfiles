@@ -18,7 +18,7 @@ keymap('n', '<C-j', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
-keymap('n', '<leader>e', ':Lex 30<cr>', opts)
+keymap('n', '<C-e>', ':Lex 30<cr>', opts)
 
 -- Rezize with arrows
 keymap('n', '<leader>rv', ':resize +4<cr>', opts)

@@ -51,8 +51,6 @@ return packer.startup(function(use)
 	-- ALL PLUGINS HERE
 	use 'folke/tokyonight.nvim'
 	
-	use 'neovim/nvim-lspconfig'
-
 	-- cmp plugins
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
@@ -65,7 +63,11 @@ return packer.startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'rafamadriz/friendly-snippets'
 
-
+	use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+	}
 
 
 
