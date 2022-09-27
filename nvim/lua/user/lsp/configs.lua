@@ -1,4 +1,7 @@
-require("mason").setup()
+local status1, mason = pcall(require, "mason")
+if not status1 then
+	return
+end
 
 local status_ok, lsp_installer = pcall(require, "mason-lspconfig")
 if not status_ok then
@@ -7,8 +10,9 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "sumneko_lua", "jsonls", "pyright", "angularls" }
+local servers = { "sumneko_lua", "jsonls", "pyright", "angularls", "tsserver" }
 
+mason.setup()
 lsp_installer.setup {
 	ensure_installed = servers,
 }

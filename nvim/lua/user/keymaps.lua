@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten keymap
 local keymap = vim.api.nvim_set_keymap
 
@@ -18,7 +16,7 @@ keymap('n', '<C-j', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 keymap('n', '<C-l>', '<C-w>l', opts)
 
-keymap('n', '<C-e>', ':Lex 30<cr>', opts)
+keymap('n', '<leader>pe', ':Lex 30<cr>', opts)
 
 -- Rezize with arrows
 keymap('n', '<leader>rv', ':resize +4<cr>', opts)
@@ -46,3 +44,5 @@ keymap('v', '∆', ':m .+1<CR>gv', opts)  -- Alt + j
 keymap('v', '˚', ':m .-2<CR>gv', opts)  -- Alt + k
 keymap('v', 'p', '"_dP', opts)
 
+-- Telescope mapping
+keymap('n', '<leader>pf', '<cmd>lua require("telescope.builtin").find_files()<cr>', opts)
