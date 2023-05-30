@@ -1,3 +1,5 @@
+configstore
 configstore/*
 yarn
 iterm2
+iterm2/*
