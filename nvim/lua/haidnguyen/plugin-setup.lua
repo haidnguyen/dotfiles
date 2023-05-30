@@ -28,14 +28,27 @@ require('lazy').setup({
 
 
   -- Tree view
-  { 'nvim-tree/nvim-tree.lua',                  version = '*' },
+  { 'nvim-tree/nvim-tree.lua',  version = '*' },
 
   -- Lualine
   { 'nvim-lualine/lualine.nvim' },
 
+  -- treesiter
+  {
+    'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    },
+    build = ':TSUpdate',
+  },
+
   -- Telescope
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   { 'nvim-telescope/telescope.nvim',            branch = '0.1.x' },
+
+  -- null-ls
+  { 'jose-elias-alvarez/null-ls.nvim' },
+  { "jay-babu/mason-null-ls.nvim" },
 
   -- LSP
   {
@@ -63,5 +76,8 @@ require('lazy').setup({
       { 'rafamadriz/friendly-snippets' }
     },
 
-  }
+  },
+
+  -- lspsaga
+  { "glepnir/lspsaga.nvim", event = "LspAttach" }
 })

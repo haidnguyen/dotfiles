@@ -22,14 +22,15 @@ cmp.setup({
     ['<S-Tab>'] = cmp_action.select_prev_or_fallback(),
     ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select_opts),
     ['<C-j>'] = cmp.mapping.select_next_item(cmp_select_opts),
-    ['<C-Space>'] = cmp.mapping.complete(),
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
   },
+
   sources = cmp.config.sources({
-    { name = "lsp" },     -- lsp
-    { name = "luasnip" }, -- snippets
-    { name = "buffer" },  -- text within current buffer
-    { name = "path" },    -- file system paths
-  }),
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'path' }
+  }, { name = 'buffer' }),
 })
+
+
