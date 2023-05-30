@@ -29,3 +29,4 @@ vim.o.conceallevel = 0
 
 vim.o.cursorline = true
 
+
