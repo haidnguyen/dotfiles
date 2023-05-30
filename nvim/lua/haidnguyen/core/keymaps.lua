@@ -6,7 +6,6 @@ keymap('', '<Space>', '<Nop>', opts)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-
 -- NORMAL
 -- Resize
 keymap('n', '<C-,>', ':vertical resize +2<CR>', opts)
@@ -21,8 +20,8 @@ keymap('n', '<C-j>', '<C-w>j', opts)
 keymap('n', '<C-k>', '<C-w>k', opts)
 
 -- Buffer navigation
-keymap('n', '<S-l>', ':bnext<CR>', opts)
-keymap('n', '<S-h>', ':bprevious<CR>', opts)
+keymap('n', '<leader>l', ':bnext<CR>', opts)
+keymap('n', '<leader>h', ':bprevious<CR>', opts)
 
 
 -- delete without add to register
@@ -43,3 +42,19 @@ keymap('n', '<leader>tp', ':tabp<CR>', opts)
 -- INSERT
 -- Fast escape
 keymap('i', 'jk', '<ESC>', opts)
+
+-- Plugins
+
+-- LSP
+keymap('n', 'fmt', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+
+-- nvim-tree
+keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+keymap('n', '<leader>tf', ':NvimTreeFindFile<CR>', opts)
+keymap('n', '<leader>tc', ':NvimTreeCollapse<CR>', opts)
+
+-- telescope
+keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
+keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
+keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
+keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts)

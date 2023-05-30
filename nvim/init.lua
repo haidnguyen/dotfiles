@@ -1,12 +1,12 @@
+require 'haidnguyen.plugin-setup'
 
-require 'user.core.options'
+require 'haidnguyen.core.options'
+require 'haidnguyen.core.keymaps'
+require 'haidnguyen.core.colorscheme'
 
-
-
-require('user.plugins')
-require('user.colorscheme')
-require('user.keymaps')
-require('user.null-ls')
-require('user.telescope')
-require('user.cmp')
-require('user.tree')
+require 'haidnguyen.plugins.lsp'
+require 'haidnguyen.plugins.cmp'
+require 'haidnguyen.plugins.comment'
+require 'haidnguyen.plugins.nvim-tree'
+require 'haidnguyen.plugins.lualine'
+require 'haidnguyen.plugins.telescope'

@@ -42,8 +42,3 @@ opt.showtabline = 2
 
 
 opt.undofile = true
-opt.breakindent = true
-opt.mouse = 'a'
-opt.scrolloff = 10
-opt.iskeyword:append('-')
-
