@@ -28,10 +28,8 @@ require('lazy').setup({
 		version = "*",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("nvim-tree").setup {}
-		end,
+		}
+
 	},
 
 	-- Highlight, edit, and navigate code
