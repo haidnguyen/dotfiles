@@ -7,7 +7,7 @@ lsp.on_attach(function(_, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
   keymap('n', 'gf', "<cmd>Lspsaga lsp_finder<CR>", opts)
-  keymap("n", "gd", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+  keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
   keymap("n", "gD", "<cmd>Lspsaga peek_definition<CR>", opts)
   keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)

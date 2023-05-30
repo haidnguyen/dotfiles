@@ -73,11 +73,26 @@ require('lazy').setup({
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
       { 'saadparwaiz1/cmp_luasnip' },
-      { 'rafamadriz/friendly-snippets' }
+      { 'rafamadriz/friendly-snippets' },
+      { 'ray-x/lsp_signature.nvim' }
     },
 
   },
 
   -- lspsaga
-  { "glepnir/lspsaga.nvim", event = "LspAttach" }
+  { "glepnir/lspsaga.nvim",    event = "LspAttach" },
+
+  -- autopairs
+  { 'windwp/nvim-autopairs' },
+  { 'windwp/nvim-ts-autotag',  after = 'nvim-treesitter' },
+
+  -- Git
+  { 'lewis6991/gitsigns.nvim' },
+
+  -- Tabline
+  { 'akinsho/bufferline.nvim', version = "*" },
+
+  -- Terminal
+  { 'akinsho/toggleterm.nvim', version = "*",            config = true }
+
 })
