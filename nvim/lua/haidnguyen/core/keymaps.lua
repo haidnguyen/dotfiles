@@ -8,8 +8,8 @@ vim.g.maplocalleader = ' '
 
 -- NORMAL
 -- Resize
-keymap('n', '<C-,>', ':vertical resize +2<CR>', opts)
-keymap('n', '<C-.>', ':vertical resize -2<CR>', opts)
+keymap('n', '<C-,>', ':vertical resize -2<CR>', opts)
+keymap('n', '<C-.>', ':vertical resize +2<CR>', opts)
 keymap('n', '<C-=>', ':resize +2<CR>', opts)
 keymap('n', '<C-->', ':resize -2<CR>', opts)
 

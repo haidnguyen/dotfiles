@@ -41,4 +41,10 @@ opt.cmdheight = 2
 opt.showtabline = 2
 
 
+-- undo
 opt.undofile = true
+
+-- diagnostic
+vim.diagnostic.config({
+  update_in_insert = true
+})
