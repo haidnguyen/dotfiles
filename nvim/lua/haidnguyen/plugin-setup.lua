@@ -22,6 +22,7 @@ require('lazy').setup({
     priority = 1000,
     opts = {}
   },
+  { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
 
   -- Comment
   { 'numToStr/Comment.nvim' },
@@ -80,19 +81,30 @@ require('lazy').setup({
   },
 
   -- lspsaga
-  { "glepnir/lspsaga.nvim",    event = "LspAttach" },
+  { "glepnir/lspsaga.nvim",      event = "LspAttach" },
 
   -- autopairs
   { 'windwp/nvim-autopairs' },
-  { 'windwp/nvim-ts-autotag',  after = 'nvim-treesitter' },
+  { 'windwp/nvim-ts-autotag',    after = 'nvim-treesitter' },
 
   -- Git
   { 'lewis6991/gitsigns.nvim' },
 
   -- Tabline
-  { 'akinsho/bufferline.nvim', version = "*" },
+  { 'akinsho/bufferline.nvim',   version = "*",            after = 'catppuccin' },
 
   -- Terminal
-  { 'akinsho/toggleterm.nvim', version = "*",            config = true }
+  { 'akinsho/toggleterm.nvim',   version = "*",            config = true },
 
+  -- Animation
+  { 'echasnovski/mini.animate',  version = "*" },
+
+  -- Git
+  { 'akinsho/git-conflict.nvim', version = "*",            config = true },
+
+  -- quicklist
+  { 'yorickpeterse/nvim-pqf' },
+
+  -- scrollbar
+  { 'petertriho/nvim-scrollbar' },
 })

@@ -3,6 +3,7 @@ require("bufferline").setup({
     mode = 'tabs',
     separator_style = 'slant',
     diagnostics = 'nvim_lsp',
+    highlights = require("catppuccin.groups.integrations.bufferline").get(),
     offsets = {
       {
         filetype = "NvimTree",

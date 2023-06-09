@@ -27,6 +27,9 @@ keymap('n', '<leader>h', ':bprevious<CR>', opts)
 -- delete without add to register
 keymap('n', 'x', '"_x', { silent = true })
 
+-- clear highlight search
+keymap('n', '<leader>cs', ':nohls', opts)
+
 -- split window
 keymap('n', '<leader>sv', '<C-w>v', opts)
 keymap('n', '<leader>sh', '<C-w>s', opts)
@@ -44,7 +47,6 @@ keymap('n', '<leader>tp', ':tabp<CR>', opts)
 keymap('i', 'jk', '<ESC>', opts)
 
 -- Plugins
-
 -- LSP
 keymap('n', 'fmt', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
 
@@ -58,3 +60,7 @@ keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
 keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts)
+keymap('n', '<leader>fs', '<cmd>Telescope lsp_document_symbols<CR>', opts)
+
+-- Git conflict
+keymap('n', '<leader>cqf', '<cmd>GitConflictListQf<CR>', opts)

@@ -25,11 +25,18 @@ end)
 lsp.ensure_installed({
   'tsserver',
   'angularls',
+  'html'
 })
 
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 require('lspconfig').angularls.setup({
   root_dir = util.root_pattern('angular.json', 'project.json', 'nx.json')
+})
+require('lspconfig').html.setup({
+   on_init = function(client)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentFormattingRangeProvider = false
+  end,
 })
 
 
