@@ -107,4 +107,14 @@ require('lazy').setup({
 
   -- scrollbar
   { 'petertriho/nvim-scrollbar' },
+
+  -- which-key
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end
+  }
 })

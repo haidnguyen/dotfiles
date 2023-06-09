@@ -21,5 +21,6 @@ require 'haidnguyen.plugins.git-conflict'
 require 'haidnguyen.plugins.catppuccin'
 require 'haidnguyen.plugins.pqf'
 require 'haidnguyen.plugins.scrollbar'
+require 'haidnguyen.plugins.which-key'
 
 -- require 'haidnguyen.plugins.animate'
