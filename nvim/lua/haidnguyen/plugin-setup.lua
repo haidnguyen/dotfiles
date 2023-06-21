@@ -96,8 +96,6 @@ require('lazy').setup({
   -- Terminal
   { 'akinsho/toggleterm.nvim',   version = "*",            config = true },
 
-  -- Animation
-  { 'echasnovski/mini.animate',  version = "*" },
 
   -- Git
   { 'akinsho/git-conflict.nvim', version = "*",            config = true },

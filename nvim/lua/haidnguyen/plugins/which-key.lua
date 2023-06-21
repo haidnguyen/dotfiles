@@ -4,7 +4,7 @@ wk.setup({
   window = {
     border = 'double',
     position = 'bottom',
-    winblend = 50
+    margin = { 1, 0.12, 1, 0.12 }
   },
   triggers = { '<leader>', 'g' }
 })
