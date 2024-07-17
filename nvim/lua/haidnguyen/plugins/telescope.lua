@@ -9,6 +9,11 @@ telescope.setup({
         ['<C-j>'] = actions.move_selection_next,
         ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
       }
+    },
+  },
+  pickers = {
+    find_files = {
+      find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
     }
   }
 })

@@ -2,9 +2,8 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
 local luasnip = require('luasnip')
-
-
 require("luasnip.loaders.from_vscode").lazy_load()
+
 
 cmp.setup({
   snippet = {
@@ -28,9 +27,6 @@ cmp.setup({
 
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
     { name = 'path' }
   }, { name = 'buffer' }),
 })
-
-

@@ -1,10 +1,21 @@
-require('mason-null-ls').setup({
-  -- list of formatters & linters for mason to install
-  ensure_installed = {
-    "prettier", -- ts/js formatter
-    "stylua", -- lua formatter
-    "eslint_d", -- ts/js linter
-  },
-  -- auto-install configured formatters & linters (with null-ls)
-  automatic_installation = true,
+local mason_tool_installer = require("mason-tool-installer")
+local mason = require("mason")
+
+mason.setup({
+	automatic_installation = true,
+	ui = {
+		icons = {
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
+		},
+	},
+})
+
+mason_tool_installer.setup({
+	ensure_installed = {
+		"prettierd",
+		"stylua", -- lua formatter
+		"eslint_d",
+	},
 })
