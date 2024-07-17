@@ -1,0 +1,8 @@
+command_timeout = 10000
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+[character]
+success_symbol = "[>](bold green)"

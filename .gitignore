@@ -3,3 +3,7 @@ configstore/*
 yarn
 iterm2
 iterm2/*
+
+alacritty/themes
+alacritty/themes/*
+gcloud
