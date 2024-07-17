@@ -11,8 +11,6 @@ end
 
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- NORMAL
 -- Resize
@@ -44,10 +42,10 @@ keymap("n", "<leader>se", "<C-w>=", get_opts("Resize Equal"))
 keymap("n", "<leader>sx", ":close<CR>", get_opts("Close all"))
 
 -- Tab navigation
-keymap("n", "<leader>to", ":tabnew<CR>", get_opts("New"))
-keymap("n", "<leader>tx", ":tabclose<CR>", get_opts("Close"))
-keymap("n", "<leader>tn", ":tabn<CR>", get_opts("Next"))
-keymap("n", "<leader>tp", ":tabp<CR>", get_opts("Prev"))
+-- keymap("n", "<leader>to", ":tabnew<CR>", get_opts("New"))
+-- keymap("n", "<leader>tx", ":tabclose<CR>", get_opts("Close"))
+-- keymap("n", "<leader>tn", ":tabn<CR>", get_opts("Next"))
+-- keymap("n", "<leader>tp", ":tabp<CR>", get_opts("Prev"))
 
 -- INSERT
 -- Fast escape
@@ -58,16 +56,16 @@ keymap("i", "jk", "<ESC>", opts)
 -- keymap('n', '<leader>fm', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', get_opts('Format Document'))
 
 -- nvim-tree
-keymap("n", "<leader>te", ":NvimTreeToggle<CR>", get_opts("Toggle"))
-keymap("n", "<leader>tf", ":NvimTreeFindFile<CR>", get_opts("Focus File"))
-keymap("n", "<leader>tc", ":NvimTreeCollapse<CR>", get_opts("Collapse"))
+-- keymap("n", "<leader>te", ":NvimTreeToggle<CR>", get_opts("Toggle"))
+-- keymap("n", "<leader>tf", ":NvimTreeFindFile<CR>", get_opts("Focus File"))
+-- keymap("n", "<leader>tc", ":NvimTreeCollapse<CR>", get_opts("Collapse"))
 
 -- telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", get_opts("Find File"))
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", get_opts("Find Grep"))
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", get_opts("Find Buffer"))
-keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", get_opts("Help"))
-keymap("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>", get_opts("Find Symbol"))
+-- keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", get_opts("Find File"))
+-- keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", get_opts("Find Grep"))
+-- keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", get_opts("Find Buffer"))
+-- keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", get_opts("Help"))
+-- keymap("n", "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>", get_opts("Find Symbol"))
 
 -- Git conflict
 keymap("n", "<leader>cq", "<cmd>GitConflictListQf<CR>", get_opts("List Conflict"))
