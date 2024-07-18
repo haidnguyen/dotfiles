@@ -32,24 +32,35 @@ return {
 				"<cmd>BufferLineCycleNext<CR>",
 				{ noremap = true, silent = true, desc = "Next" }
 			)
+
 			vim.keymap.set(
 				"n",
 				"<leader>tp",
 				"<cmd>BufferLineCyclePrev<CR>",
 				{ noremap = true, silent = true, desc = "Prev" }
 			)
+
 			vim.keymap.set(
 				"n",
 				"<leader>ts",
 				"<cmd>BufferLineSortByDirectory<CR>",
 				{ noremap = true, silent = true, desc = "Sort" }
 			)
+
 			vim.keymap.set(
 				"n",
-				"<leader>tp",
+				"<leader>tt",
 				"<cmd>BufferLinePick<CR>",
 				{ noremap = true, silent = true, desc = "Pick" }
 			)
+
+			vim.keymap.set(
+				"n",
+				"<leader>td",
+				"<cmd>BufferLineCloseOthers<CR>",
+				{ noremap = true, silent = true, desc = "Close Others" }
+			)
+
 			vim.keymap.set("n", "<leader>tx", ":bp|bd#<CR>", { noremap = true, silent = true, desc = "Close" })
 		end,
 	},

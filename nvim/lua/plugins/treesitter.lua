@@ -31,6 +31,7 @@ return {
 					"vim",
 					"dockerfile",
 					"gitignore",
+					"angular",
 				},
 				-- auto install above language parsers
 				auto_install = true,

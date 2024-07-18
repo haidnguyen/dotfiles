@@ -14,10 +14,12 @@ keymap("", "<Space>", "<Nop>", opts)
 
 -- NORMAL
 -- Resize
-keymap("n", "<C-,>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-.>", ":vertical resize +2<CR>", opts)
-keymap("n", "<C-=>", ":resize +2<CR>", opts)
-keymap("n", "<C-->", ":resize -2<CR>", opts)
+keymap("n", "<C-=>", ":vertical resize -2<CR>", get_opts("Vertial resize -"))
+keymap("n", "<C-->", ":vertical resize +2<CR>", get_opts("Vertial resize +"))
+keymap("n", "<leader>ru", ":resize +4<CR>", get_opts("Resize +"))
+keymap("n", "<leader>rd", ":resize -4<CR>", get_opts("Resize -"))
+-- keymap("n", "<C-=>", ":resize +2<CR>", opts)
+-- keymap("n", "<C-->", ":resize -2<CR>", opts)
 
 -- Window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

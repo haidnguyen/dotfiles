@@ -29,6 +29,11 @@ return {
 					lua = { "stylua" },
 				},
 				format_on_save = function(bufnr)
+					-- Disable with a global or buffer-local variable
+					if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+						return
+					end
+
 					local bufname = vim.api.nvim_buf_get_name(bufnr)
 					if bufname:match("/node_modules/") then
 						return
@@ -43,13 +48,19 @@ return {
 						end
 					end
 
-					return { timeout_ms = 200, lsp_format = "fallback" }, on_format
+					return { timeout_ms = 500, lsp_format = "fallback" }, on_format
 				end,
 
 				format_after_save = function(bufnr)
+					-- Disable with a global or buffer-local variable
+					if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+						return
+					end
+
 					if not slow_format_filetypes[vim.bo[bufnr].filetype] then
 						return
 					end
+
 					return { lsp_format = "fallback" }
 				end,
 			})
@@ -61,6 +72,24 @@ return {
 				noremap = true,
 				silent = true,
 				desc = "Format Document",
+			})
+
+			vim.api.nvim_create_user_command("FormatDisable", function(args)
+				if args.bang then
+					-- FormatDisable! will disable formatting just for this buffer
+					vim.b.disable_autoformat = true
+				else
+					vim.g.disable_autoformat = true
+				end
+			end, {
+				desc = "Disable autoformat-on-save",
+				bang = true,
+			})
+			vim.api.nvim_create_user_command("FormatEnable", function()
+				vim.b.disable_autoformat = false
+				vim.g.disable_autoformat = false
+			end, {
+				desc = "Re-enable autoformat-on-save",
 			})
 		end,
 	},

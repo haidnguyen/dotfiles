@@ -15,7 +15,7 @@ return {
 						javascript = {
 							inlayHints = {
 								includeInlayEnumMemberValueHints = true,
-								includeInlayFunctionLikeReturnTypeHints = true,
+								includeInlayFunctionLikeReturnTypeHints = false,
 								includeInlayFunctionParameterTypeHints = false,
 								includeInlayParameterNameHints = "literals", -- 'none' | 'literals' | 'all';
 								includeInlayParameterNameHintsWhenArgumentMatchesName = false,
@@ -26,7 +26,7 @@ return {
 						typescript = {
 							inlayHints = {
 								includeInlayEnumMemberValueHints = true,
-								includeInlayFunctionLikeReturnTypeHints = true,
+								includeInlayFunctionLikeReturnTypeHints = false,
 								includeInlayFunctionParameterTypeHints = false,
 								includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
 								includeInlayParameterNameHintsWhenArgumentMatchesName = false,

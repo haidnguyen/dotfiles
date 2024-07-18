@@ -65,7 +65,6 @@ return {
 			local keymap = vim.keymap.set
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
-			local conform = require("conform")
 
 			lsp.on_attach(function(client, bufnr)
 				local function get_opts(desc)
@@ -109,6 +108,7 @@ return {
 				"angularls",
 				"html",
 				"jsonls",
+				"cssls",
 			})
 
 			lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
@@ -122,6 +122,10 @@ return {
 					client.server_capabilities.documentFormattingProvider = false
 					client.server_capabilities.documentFormattingRangeProvider = false
 				end,
+			})
+
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
 			})
 
 			lspconfig.eslint.setup({

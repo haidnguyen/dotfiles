@@ -17,5 +17,11 @@ return {
 			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 		end,
 	},
-	{ "windwp/nvim-ts-autotag", after = "nvim-treesitter" },
+	{
+		"windwp/nvim-ts-autotag",
+		after = "nvim-treesitter",
+		config = function()
+			require("nvim-ts-autotag").setup({})
+		end,
+	},
 }
