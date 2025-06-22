@@ -21,7 +21,7 @@ return {
 				{ noremap = true, silent = true, desc = "Collapse" }
 			)
 
-			require("nvim-tree").setup()
+			require("nvim-tree").setup({})
 		end,
 	},
 }

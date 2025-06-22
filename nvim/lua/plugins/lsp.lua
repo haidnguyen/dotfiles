@@ -16,7 +16,6 @@ return {
 					pcall(vim.cmd, "MasonUpdate")
 				end,
 			},
-			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
 			-- Autocompletion
 			{ "hrsh7th/nvim-cmp" }, -- Required
@@ -54,7 +53,6 @@ return {
 				ensure_installed = {
 					"prettierd",
 					"stylua", -- lua formatter
-					"eslint_d",
 				},
 			})
 
@@ -94,21 +92,18 @@ return {
 				keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", get_opts("Show hover doc"))
 				-- keymap("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)
 
-				if client.name == "tsserver" then
-					keymap("n", "<leader>cr", ":TypescriptRenameFile<CR>", get_opts("Typescript rename file"))
-					keymap("n", "<leader>ci", ":TypescriptOrganizeImports<CR>", get_opts("Typescript organize imports"))
-					keymap("n", "<leader>cr", ":TypescriptRemoveUnused<CR>", get_opts("Typescript remove unused"))
-				end
-
 				lsp.default_keymaps({ buffer = bufnr })
 			end)
 
 			lsp.ensure_installed({
-				"tsserver",
+				"ts_ls",
+				"lua_ls",
+				"eslint",
 				"angularls",
 				"html",
-				"jsonls",
 				"cssls",
+				"jsonls",
+				"tailwindcss",
 			})
 
 			lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
@@ -126,6 +121,7 @@ return {
 
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
+				filetypes = { "css", "scss", "less", "htmlangular" },
 			})
 
 			lspconfig.eslint.setup({
@@ -140,6 +136,10 @@ return {
 					},
 				},
 			})
+			lspconfig.nxls.setup({
+				root_dir = util.root_pattern("nx.json", ".git"),
+			})
+			lspconfig.ts_ls.setup({})
 
 			lsp.setup()
 
