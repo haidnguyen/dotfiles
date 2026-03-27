@@ -7,3 +7,7 @@ iterm2/*
 alacritty/themes
 alacritty/themes/*
 gcloud
+
+/raycast
+/nx
+/mole

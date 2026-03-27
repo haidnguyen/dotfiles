@@ -14,8 +14,11 @@ return {
 			require("bufferline").setup({
 				options = {
 					-- 	mode = "tabs",
-					-- 	diagnostics = "nvim_lsp",
-					highlights = require("catppuccin.groups.integrations.bufferline").get(),
+					diagnostics = "nvim_lsp",
+					indicator = {
+						style = "underline",
+					},
+					-- highlights = require("catppuccin.groups.integrations.bufferline").get(),
 					offsets = {
 						{
 							filetype = "NvimTree",
